@@ -28,6 +28,10 @@ class User extends Model {
     return this; // returns the model  that has just been initialized
   }
 
+  static associate(models) {
+    this.belongsTo(models.File, { foreignKey: 'avatar_id' }); // User model belongs to File model, it means that we have an avatar_id inside of our user
+  }
+
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash); // return a boolean
   }

@@ -10,6 +10,13 @@ class File extends Model {
         // calling the init function inside the Model
         name: Sequelize.STRING,
         path: Sequelize.STRING,
+        url: {
+          type: Sequelize.VIRTUAL,
+          get() {
+            // how i wanna set the value
+            return `http://localhost:3333/files/${this.path}`;
+          },
+        },
       },
       { sequelize }
     );

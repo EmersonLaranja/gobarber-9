@@ -29,7 +29,7 @@ class User extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.File, { foreignKey: 'avatar_id' }); // User model belongs to File model, it means that we have an avatar_id inside of our user
+    this.belongsTo(models.File, { foreignKey: 'avatar_id', as: 'avatar' }); // User model belongs to File model, it means that we have an avatar_id inside of our user
   }
 
   checkPassword(password) {

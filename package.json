@@ -1,5 +1,6 @@
 {
   "name": "gobarber",
+  "author": "Emerson Laranja",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

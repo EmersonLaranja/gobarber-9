@@ -14,7 +14,7 @@ class File extends Model {
           type: Sequelize.VIRTUAL,
           get() {
             // how i wanna set the value
-            return `http://localhost:3333/files/${this.path}`;
+            return `${process.env.APP_URL}files/${this.path}`;
           },
         },
       },
